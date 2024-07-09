@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnPaste": true,
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-17",
+        "path": "/sdkman/candidates/java/current",
+        "default": true
+      }
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
+  }
+}

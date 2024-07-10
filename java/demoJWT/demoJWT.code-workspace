@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnPaste": true,
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-17",
+        "path": "/sdkman/candidates/java/current",
+        "default": true
+      }
+    ],
+    "java.compile.nullAnalysis.mode": "automatic",
+    "sqltools.connections": [
+      {
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 5432,
+        "driver": "PostgreSQL",
+        "name": "demojwt",
+        "database": "DB",
+        "username": "postgres"
+      }
+    ],
+    "yaml.completion": true,
+    "yaml.format.enable": true,
+    "yaml.schemas": {
+      "url": "globPattern",
+      "Kubernetes": "globPattern",
+      "https://json.schemastore.org/cloud-sdk-pipeline-config-schema.json": "file:///c%3A/IT/Developer/demo/java/demoJWT/src/main/resources/application.yml"
+    }
+  }
+}

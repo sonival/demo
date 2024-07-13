@@ -1,10 +1,11 @@
-package config;
-
+package com.demojwt.security.config;
 import java.io.IOException;
 import org.springframework.http.HttpHeaders;
+
+import com.demojwt.security.dto.ErrorDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import dto.ErrorDto;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

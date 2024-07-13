@@ -1,4 +1,4 @@
-package config;
+package com.demojwt.security.services;
 
 import java.security.Key;
 import java.util.Date;
@@ -7,6 +7,9 @@ import java.util.Map;
 import java.util.function.Function;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+
+import com.demojwt.security.user.User;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -14,6 +17,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 
+@Service
 public class JWTService {
     // https://acte.ltd/utils/randomkeygen
     private static final String SECRET_KEY = "cf149060a034484a041ffa9dd5d8086a0b03cdd739e778d2b8aa487a00afee9b";
@@ -66,6 +70,10 @@ public class JWTService {
     private Key getSignKey(String token) {
        byte[]  keyBytes = Decoders.BASE64.decode(SECRET_KEY);
        return Keys.hmacShaKeyFor(keyBytes);
+    }
+    public String generateRefreshToken(User user) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'generateRefreshToken'");
     }
 
 

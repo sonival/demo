@@ -1,11 +1,12 @@
 package com.demojwt.security.controller;
 
 
+import com.demojwt.security.user.Role;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import user.Role;
 
 @Data
 @Builder

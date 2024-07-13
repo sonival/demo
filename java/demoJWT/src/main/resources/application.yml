@@ -6,18 +6,16 @@ spring:
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-    driverClassName: org.postgresql.Driver
-    platform: postgres
-    initialization-mode: always
+    # driverClassName: org.postgresql.Driver
+    # platform: postgres
+    # initialization-mode: always
   jpa:
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
-    generate-ddl: false
-    open-in-view: true
     hibernate:
       ddl-auto: create-drop
+    show-sql: true
     properties:
       hibernate:
         format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
        

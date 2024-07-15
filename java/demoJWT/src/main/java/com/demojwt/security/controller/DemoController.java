@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class DemoController {
     
-    @GetMapping
+    @GetMapping("/hello")
     public ResponseEntity<String> sayHello(){
         return ResponseEntity.ok("Hello its okey...");
     }

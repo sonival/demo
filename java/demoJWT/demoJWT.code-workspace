@@ -32,6 +32,10 @@
       "Kubernetes": "globPattern",
       "https://json.schemastore.org/cloud-sdk-pipeline-config-schema.json": "file:///c%3A/IT/Developer/demo/java/demoJWT/src/main/resources/application.yml"
     },
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "rest-client.environmentVariables": {
+      "$shared": {}
+    },
+    "rest-client.logLevel": "verbos"
   }
 }

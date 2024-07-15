@@ -1,0 +1,21 @@
+@host = http://localhost:8080
+###
+
+GET  {{host}}/api/v1/demo/hello HTTP/1.1
+
+###
+
+
+// GET TOKEN FROM APP
+GET {{host}}/api/v1/auth/demo
+
+###
+// GET TOKEN FROM APP
+POST {{host}}/api/v1/auth/authenticate
+content-type: application/json
+
+{
+  "email":  "admin@mail.com",
+  "password": "123@mudar"
+}
+

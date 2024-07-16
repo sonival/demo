@@ -18,26 +18,28 @@ import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor
-@EnableJpaRepositories(basePackages = "com.demojwt.security.repository")
 public class ApplicationConfig {
     private final UserRepository userRepository;
+
     @Bean
-    public UserDetailsService userDetailsService(){
-        return username ->  userRepository.findByEmail(username)
-        .orElseThrow(() -> new UsernameNotFoundException("User not exists"));
+    public UserDetailsService userDetailsService() {
+        return username -> userRepository.findByEmail(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not exists"));
         // return new UserDetailsService(){
 
-        //     @Override
-        //     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        //         // TODO Auto-generated method stub
-        //         throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
-        //     }
+        // @Override
+        // public UserDetails loadUserByUsername(String username) throws
+        // UsernameNotFoundException {
+        // // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method
+        // 'loadUserByUsername'");
+        // }
 
         // };
     }
 
     @Bean
-    public AuthenticationProvider authenticationProvider(){
+    public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authprovider = new DaoAuthenticationProvider();
         authprovider.setUserDetailsService(userDetailsService());
         authprovider.setPasswordEncoder(passwordEncoder());
@@ -45,13 +47,13 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception{
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
-   
+
 }

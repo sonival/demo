@@ -1,0 +1,3 @@
+[submodule "ts-playgroud/demo"]
+	path = ts-playgroud/demo
+	url = https://github.com/sonival/demo.git

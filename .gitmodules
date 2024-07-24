@@ -1,3 +1,6 @@
 [submodule "ts-playgroud/demo"]
 	path = ts-playgroud/demo
 	url = https://github.com/sonival/demo.git
+[submodule "react-playground/demo"]
+	path = react-playground/demo
+	url = https://github.com/sonival/demo.git

@@ -1,0 +1,24 @@
+{
+    "name": "cypress",
+    "description": "cypress",
+    "main": "index.js",
+    "type": "module",
+    "engines": {
+        "node": "v20.15.0"
+    },
+    "scripts": {
+        "test": "echo \"error Teste\"  && exit 1 ",
+        "cypress:web": "npx cypress open",
+        "cypress:headless": "npx cypress run --browser chrome"
+    },
+    "keywords": [],
+    "author": "Soni",
+    "license": "ISC",
+    "version": "1.0.0",
+    "devDependencies": {
+        "cypress": "^13.13.1"
+    },
+    "dependencies": {
+        "mocha": "^10.6.0"
+    }
+}
